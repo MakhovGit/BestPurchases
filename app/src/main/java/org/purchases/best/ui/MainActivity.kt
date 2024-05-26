@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import org.purchases.best.ui.screens.CreateListScreen
 import org.purchases.best.ui.screens.HomeScreen
 import org.purchases.best.ui.theme.BestTheme
 
@@ -13,7 +14,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             BestTheme {
-                HomeScreen()
+                CreateListScreen()
             }
         }
     }
