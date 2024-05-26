@@ -62,6 +62,12 @@ dependencies {
     implementation(libs.androidx.material3)
     implementation(libs.constraint.layout.compose)
 
+    // Koin
+    implementation(platform(libs.koin.bom))
+    implementation(libs.koin.core)
+    implementation(libs.koin.android)
+    implementation(libs.koin.compose)
+
     // Tests
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
