@@ -26,10 +26,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import org.purchases.best.R
+import org.purchases.best.model.intents.IntentContract
+import org.purchases.best.model.screens.ScreenEvents
+import org.purchases.best.model.screens.ScreenStates
 import org.purchases.best.ui.theme.ButtonIconBackgroundColor
 import org.purchases.best.ui.theme.ButtonIconColor
 import org.purchases.best.ui.theme.ButtonTextColor
@@ -37,9 +39,11 @@ import org.purchases.best.ui.theme.LocalTitleColor
 import org.purchases.best.ui.theme.PrimaryButtonColor
 import org.purchases.best.ui.theme.ScreenBackgroundColor
 
-@Preview
 @Composable
-fun HomeScreen() {
+fun HomeScreen(
+    screenState: ScreenStates.HomeScreenState,
+    intent: IntentContract<ScreenStates, ScreenEvents>
+) {
     Surface(
         color = ScreenBackgroundColor,
         modifier = Modifier.fillMaxSize()
