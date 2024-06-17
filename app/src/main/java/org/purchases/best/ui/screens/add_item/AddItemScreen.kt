@@ -1,4 +1,4 @@
-package org.purchases.best.ui.screens
+package org.purchases.best.ui.screens.add_item
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -29,23 +29,25 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import org.purchases.best.R
-import org.purchases.best.model.intents.IntentContract
-import org.purchases.best.model.screens.ScreenEvents
-import org.purchases.best.model.screens.ScreenStates
+import org.purchases.best.model.info.PurchaseInfo
+import org.purchases.best.model.screens.add_item.AddItemScreenContract
 import org.purchases.best.ui.theme.ButtonTextColor
 import org.purchases.best.ui.theme.LocalTitleColor
 import org.purchases.best.ui.theme.PrimaryButtonColor
 import org.purchases.best.ui.theme.ScreenBackgroundColor
 import org.purchases.best.ui.theme.SecondaryButtonColor
 import org.purchases.best.ui.theme.TextFieldBackgroundColor
+import org.purchases.best.utils.EMPTY
 
 @Composable
 fun AddItemScreen(
-    screenState: ScreenStates.AddItemScreenState,
-    intent: IntentContract<ScreenStates, ScreenEvents>
+    listId: Long,
+    viewModel: AddItemScreenViewModel,
+    navController: NavController
 ) {
-    var itemTitle by remember { mutableStateOf("") }
+    var itemTitle by remember { mutableStateOf(String.EMPTY) }
     Surface(
         color = ScreenBackgroundColor,
         modifier = Modifier.fillMaxSize()
@@ -112,7 +114,9 @@ fun AddItemScreen(
                         defaultElevation = 3.dp,
                         pressedElevation = 0.dp
                     ),
-                    onClick = {},
+                    onClick = {
+                        navController.navigateUp()
+                    },
                     modifier = Modifier.weight(0.5f)
                 ) {
                     Text(
@@ -135,7 +139,22 @@ fun AddItemScreen(
                         defaultElevation = 3.dp,
                         pressedElevation = 0.dp
                     ),
-                    onClick = {},
+                    onClick = {
+                        val finalItemTitle = itemTitle.trim()
+                        if (finalItemTitle.isNotBlank()) {
+                            viewModel.handleEvent(
+                                AddItemScreenContract.Event.AddItemButtonPressedEvent(
+                                    listId = listId,
+                                    purchase = PurchaseInfo(
+                                        listId = listId,
+                                        description = itemTitle,
+                                        checked = false
+                                    )
+                                )
+                            )
+                        }
+                        navController.navigateUp()
+                    },
                     modifier = Modifier
                         .weight(0.5f)
                 ) {

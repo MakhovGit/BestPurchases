@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import org.purchases.best.ui.screens.MainScreen
+import org.purchases.best.ui.navigation.AppNavigation
 import org.purchases.best.ui.theme.BestTheme
 
 class MainActivity : ComponentActivity() {
@@ -13,7 +13,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             BestTheme {
-                MainScreen()
+                AppNavigation()
             }
         }
     }
