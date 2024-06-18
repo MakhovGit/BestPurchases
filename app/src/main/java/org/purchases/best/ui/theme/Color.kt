@@ -12,7 +12,6 @@ val Pink40 = Color(0xFF7D5260)
 
 val ScreenBackgroundColor = Color(0xFFFFF4F4)
 val LocalTitleColor = Color.Black
-val ListCardColor = Color.White
 val PrimaryButtonColor = Color(0xFFf26C6D)
 val SecondaryButtonColor = Color(0xFF808080)
 val ButtonTextColor = Color.White

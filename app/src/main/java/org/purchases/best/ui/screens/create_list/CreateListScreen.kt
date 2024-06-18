@@ -45,6 +45,7 @@ import org.purchases.best.settings.MAIN_LOG_TAG
 import org.purchases.best.ui.navigation.NavigationItem
 import org.purchases.best.ui.screens.PurchaseRecordOnCreate
 import org.purchases.best.ui.theme.ButtonTextColor
+import org.purchases.best.ui.theme.Dimens
 import org.purchases.best.ui.theme.LocalTitleColor
 import org.purchases.best.ui.theme.PrimaryButtonColor
 import org.purchases.best.ui.theme.ScreenBackgroundColor
@@ -117,7 +118,7 @@ fun CreateListScreen(
                 shape = boxShape,
                 color = TextFieldBackgroundColor,
                 modifier = Modifier
-                    .weight(1f)
+                    .weight(Dimens.Commons.MaxWeight)
                     .shadow(
                         elevation = 10.dp,
                         shape = boxShape
@@ -174,7 +175,7 @@ fun CreateListScreen(
                     )
                     Divider(modifier = Modifier.padding(horizontal = 20.dp))
                     LazyColumn(
-                        modifier = Modifier.weight(1f)
+                        modifier = Modifier.weight(Dimens.Commons.MaxWeight)
                     ) {
                         Log.d(MAIN_LOG_TAG, purchases.size.toString())
                         purchases.forEach {

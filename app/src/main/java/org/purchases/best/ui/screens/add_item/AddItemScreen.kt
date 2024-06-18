@@ -34,6 +34,7 @@ import org.purchases.best.R
 import org.purchases.best.model.info.PurchaseInfo
 import org.purchases.best.model.screens.add_item.AddItemScreenContract
 import org.purchases.best.ui.theme.ButtonTextColor
+import org.purchases.best.ui.theme.Dimens
 import org.purchases.best.ui.theme.LocalTitleColor
 import org.purchases.best.ui.theme.PrimaryButtonColor
 import org.purchases.best.ui.theme.ScreenBackgroundColor
@@ -98,7 +99,7 @@ fun AddItemScreen(
                         shape = textFieldShape
                     )
             )
-            Spacer(modifier = Modifier.weight(1f))
+            Spacer(modifier = Modifier.weight(Dimens.Commons.MaxWeight))
             Row(
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(30.dp),

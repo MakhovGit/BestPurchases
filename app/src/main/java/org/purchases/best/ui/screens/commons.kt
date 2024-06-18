@@ -50,6 +50,7 @@ import org.purchases.best.settings.LIST_ID
 import org.purchases.best.ui.navigation.NavigationItem
 import org.purchases.best.ui.screens.home.HomeScreenViewModel
 import org.purchases.best.ui.screens.list.ListScreenViewModel
+import org.purchases.best.ui.theme.Dimens
 import org.purchases.best.ui.theme.ScreenBackgroundColor
 import org.purchases.best.utils.EMPTY
 
@@ -131,7 +132,7 @@ fun HomeScreenCard(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(start = 20.dp, end = 20.dp)
-                    .weight(1f)
+                    .weight(Dimens.Commons.MaxWeight)
             )
             Box() {
                 Icon(
@@ -181,7 +182,7 @@ fun PurchaseRecordOnCreate(description: String) {
             Text(
                 text = description,
                 modifier = Modifier
-                    .weight(1f)
+                    .weight(Dimens.Commons.MaxWeight)
             )
         }
     }
@@ -222,7 +223,7 @@ fun PurchaseRecord(purchaseInfo: PurchaseInfo, viewModel: ListScreenViewModel) {
                 text = purchaseInfo.description,
                 textDecoration = if (isCheckedState) TextDecoration.LineThrough else null,
                 modifier = Modifier
-                    .weight(1f)
+                    .weight(Dimens.Commons.MaxWeight)
             )
         }
     }

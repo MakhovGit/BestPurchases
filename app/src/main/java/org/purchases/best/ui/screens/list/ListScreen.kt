@@ -45,6 +45,7 @@ import org.purchases.best.ui.screens.TopBar
 import org.purchases.best.ui.theme.ButtonIconBackgroundColor
 import org.purchases.best.ui.theme.ButtonIconColor
 import org.purchases.best.ui.theme.ButtonTextColor
+import org.purchases.best.ui.theme.Dimens
 import org.purchases.best.ui.theme.PrimaryButtonColor
 import org.purchases.best.ui.theme.ScreenBackgroundColor
 
@@ -88,19 +89,40 @@ fun ListScreen(
                             .fillMaxSize()
                             .padding(20.dp)
                     ) {
-                        LazyColumn(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .weight(1f)
+                        if (viewModel.screenState.data.purchasesChecked.isEmpty() &&
+                            viewModel.screenState.data.purchasesNotChecked.isEmpty()
                         ) {
-                            item {
-                                viewModel.screenState.data.purchasesNotChecked.forEach { purchase ->
-                                    PurchaseRecord(purchase, viewModel)
-                                }
+                            Box(
+                                contentAlignment = Alignment.Center,
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .weight(Dimens.Commons.MaxWeight)
+                            ) {
+                                Text(
+                                    text = "Пока нет пунктов",
+                                    color = Color.Gray,
+                                    textAlign = TextAlign.Center,
+                                    fontSize = 30.sp,
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                        .padding(vertical = 20.dp)
+                                )
                             }
-                            item {
-                                viewModel.screenState.data.purchasesChecked.forEach { purchase ->
-                                    PurchaseRecord(purchase, viewModel)
+                        } else {
+                            LazyColumn(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .weight(Dimens.Commons.MaxWeight)
+                            ) {
+                                item {
+                                    viewModel.screenState.data.purchasesNotChecked.forEach { purchase ->
+                                        PurchaseRecord(purchase, viewModel)
+                                    }
+                                }
+                                item {
+                                    viewModel.screenState.data.purchasesChecked.forEach { purchase ->
+                                        PurchaseRecord(purchase, viewModel)
+                                    }
                                 }
                             }
                         }

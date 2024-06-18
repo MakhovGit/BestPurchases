@@ -38,9 +38,11 @@ import org.purchases.best.R
 import org.purchases.best.model.screens.home.HomeScreenContract
 import org.purchases.best.ui.navigation.NavigationItem
 import org.purchases.best.ui.screens.HomeScreenCard
+import org.purchases.best.ui.screens.MainProgressIndicator
 import org.purchases.best.ui.theme.ButtonIconBackgroundColor
 import org.purchases.best.ui.theme.ButtonIconColor
 import org.purchases.best.ui.theme.ButtonTextColor
+import org.purchases.best.ui.theme.Dimens
 import org.purchases.best.ui.theme.LocalTitleColor
 import org.purchases.best.ui.theme.PrimaryButtonColor
 import org.purchases.best.ui.theme.ScreenBackgroundColor
@@ -77,7 +79,7 @@ fun HomeScreen(
                     .padding(vertical = 20.dp)
             )
             if (viewModel.screenState.loadingLists) {
-                // MainProgressIndicator(modifier = Modifier.weight(1F))
+                MainProgressIndicator(modifier = Modifier.weight(1F))
             } else {
                 if (viewModel.screenState.lists.isNotEmpty()) {
                     LazyColumn(
@@ -85,7 +87,7 @@ fun HomeScreen(
                         contentPadding = PaddingValues(vertical = 10.dp),
                         modifier = Modifier
                             .fillMaxWidth()
-                            .weight(1f)
+                            .weight(Dimens.Commons.MaxWeight)
                     ) {
                         viewModel.screenState.lists.forEach {
                             item {
@@ -102,7 +104,7 @@ fun HomeScreen(
                         contentAlignment = Alignment.Center,
                         modifier = Modifier
                             .fillMaxWidth()
-                            .weight(1f)
+                            .weight(Dimens.Commons.MaxWeight)
                     ) {
                         Text(
                             text = "Пока нет списков",
