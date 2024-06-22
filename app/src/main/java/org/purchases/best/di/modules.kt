@@ -11,7 +11,9 @@ import org.purchases.best.ui.screens.add_item.AddItemScreenViewModel
 import org.purchases.best.ui.screens.create_list.CreateListScreenViewModel
 import org.purchases.best.ui.screens.home.HomeScreenViewModel
 import org.purchases.best.ui.screens.list.ListScreenViewModel
-import org.purchases.best.utils.DbMapper
+import org.purchases.best.utils.db_mappers.ListMapper
+import org.purchases.best.utils.db_mappers.ListWithPurchasesMapper
+import org.purchases.best.utils.db_mappers.PurchaseMapper
 
 val appKoinModule = module {
     single { "localdatabase.db" }
@@ -19,13 +21,17 @@ val appKoinModule = module {
         Room.databaseBuilder(context = get(), klass = LocalDatabase::class.java, name = get())
             .build()
     }
-    single { DbMapper }
+    single { ListMapper() }
+    single { PurchaseMapper() }
+    single { ListWithPurchasesMapper(purchaseMapper = get()) }
     single<LocalRepository> {
         LocalRepositoryImpl(
             listDao = get<LocalDatabase>().getListDao(),
             purchaseDao = get<LocalDatabase>().getPurchaseDao(),
             listsWithPurchasesDao = get<LocalDatabase>().getListWithPurchasesDao(),
-            dbMapper = get()
+            listMapper = get(),
+            listWithPurchasesMapper = get(),
+            purchaseMapper = get()
         )
     }
     single<DatabaseInteractor> { DatabaseInteractor(repository = get()) }
