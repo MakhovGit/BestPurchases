@@ -1,7 +1,6 @@
 package org.purchases.best.data.room.dao
 
 import androidx.room.Dao
-import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import org.purchases.best.data.room.entities.PurchaseEntity
@@ -14,9 +13,6 @@ interface PurchaseDao {
 
     @Insert
     suspend fun insertPurchases(purchases: List<PurchaseEntity>)
-
-    @Delete
-    suspend fun deletePurchase(purchaseEntity: PurchaseEntity)
 
     @Query("DELETE FROM purchases WHERE list_id = :listId")
     suspend fun deletePurchase(listId: Long)

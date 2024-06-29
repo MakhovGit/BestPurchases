@@ -7,8 +7,9 @@ import org.purchases.best.model.screens.ViewState
 class HomeScreenContract {
 
     data class State(
-        val lists: List<ListInfo> = listOf(),
-        val loadingLists: Boolean = true
+        val isLoading: Boolean = true,
+        val data: List<ListInfo> = listOf(),
+        val error: Throwable? = null
     ) : ViewState
 
     sealed class Event : ViewEvent {

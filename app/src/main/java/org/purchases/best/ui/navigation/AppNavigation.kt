@@ -6,14 +6,14 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import org.koin.androidx.compose.koinViewModel
 import org.purchases.best.settings.LIST_ID
-import org.purchases.best.ui.screens.add_item.AddItemScreen
-import org.purchases.best.ui.screens.add_item.AddItemScreenViewModel
-import org.purchases.best.ui.screens.create_list.CreateListScreen
-import org.purchases.best.ui.screens.create_list.CreateListScreenViewModel
-import org.purchases.best.ui.screens.home.HomeScreen
-import org.purchases.best.ui.screens.home.HomeScreenViewModel
-import org.purchases.best.ui.screens.list.ListScreen
-import org.purchases.best.ui.screens.list.ListScreenViewModel
+import org.purchases.best.ui.screens.add_item_screen.AddItemScreen
+import org.purchases.best.ui.screens.add_item_screen.AddItemScreenViewModel
+import org.purchases.best.ui.screens.create_list_screen.CreateListScreen
+import org.purchases.best.ui.screens.create_list_screen.CreateListScreenViewModel
+import org.purchases.best.ui.screens.home_screen.HomeScreen
+import org.purchases.best.ui.screens.home_screen.HomeScreenViewModel
+import org.purchases.best.ui.screens.list_screen.ListScreen
+import org.purchases.best.ui.screens.list_screen.ListScreenViewModel
 import org.purchases.best.utils.ZERO
 
 @Composable

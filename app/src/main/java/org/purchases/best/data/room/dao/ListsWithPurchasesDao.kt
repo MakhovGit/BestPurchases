@@ -8,10 +8,6 @@ import org.purchases.best.data.room.relations.ListWithPurchases
 @Dao
 interface ListsWithPurchasesDao {
     @Transaction
-    @Query("SELECT * FROM lists")
-    suspend fun getListsWithPurchases(): List<ListWithPurchases>
-
-    @Transaction
     @Query("SELECT * FROM lists WHERE list_id = :listId")
     suspend fun getListWithPurchases(listId: Long): ListWithPurchases
 }
