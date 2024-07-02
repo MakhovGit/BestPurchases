@@ -1,8 +1,8 @@
 package org.purchases.best.model.screens.list
 
-import org.purchases.best.model.info.ListWithPurchasesInfo
 import org.purchases.best.model.screens.ViewEvent
 import org.purchases.best.model.screens.ViewState
+import org.purchases.core.model.info.ListWithPurchasesInfo
 
 class ListScreenContract {
     data class State(

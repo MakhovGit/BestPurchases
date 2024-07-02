@@ -5,7 +5,6 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import org.koin.androidx.compose.koinViewModel
-import org.purchases.best.settings.LIST_ID
 import org.purchases.best.ui.screens.add_item_screen.AddItemScreen
 import org.purchases.best.ui.screens.add_item_screen.AddItemScreenViewModel
 import org.purchases.best.ui.screens.create_list_screen.CreateListScreen
@@ -14,7 +13,8 @@ import org.purchases.best.ui.screens.home_screen.HomeScreen
 import org.purchases.best.ui.screens.home_screen.HomeScreenViewModel
 import org.purchases.best.ui.screens.list_screen.ListScreen
 import org.purchases.best.ui.screens.list_screen.ListScreenViewModel
-import org.purchases.best.utils.ZERO
+import org.purchases.core.settings.LIST_ID
+import org.purchases.core.utils.ZERO
 
 @Composable
 fun AppNavigation() {
@@ -29,7 +29,7 @@ fun AppNavigation() {
                 navController = navController
             )
         }
-        composable(route = NavigationItem.CreateListScreen.route) { backStackEntry ->
+        composable(route = NavigationItem.CreateListScreen.route) {
             CreateListScreen(
                 viewModel = koinViewModel<CreateListScreenViewModel>(),
                 navController = navController

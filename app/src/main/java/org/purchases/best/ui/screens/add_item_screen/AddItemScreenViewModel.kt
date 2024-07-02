@@ -2,7 +2,7 @@ package org.purchases.best.ui.screens.add_item_screen
 
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
-import org.purchases.best.data.interactors.DatabaseInteractor
+import org.purchases.best.database.data.interactors.DatabaseInteractor
 import org.purchases.best.model.screens.add_item.AddItemScreenContract
 import org.purchases.best.ui.base.BaseViewModelAbstract
 

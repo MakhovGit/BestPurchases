@@ -1,6 +1,5 @@
 package org.purchases.best.ui.theme
 
-import androidx.annotation.Dimension
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily

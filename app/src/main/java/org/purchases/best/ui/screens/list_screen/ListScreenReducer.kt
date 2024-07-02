@@ -1,7 +1,7 @@
 package org.purchases.best.ui.screens.list_screen
 
-import org.purchases.best.model.interactors.database_interactor.DatabaseInteractorMessages
-import org.purchases.best.model.interactors.database_interactor.RequestListWithPurchases
+import org.purchases.best.database.model.interactors.database_interactor.DatabaseInteractorMessages
+import org.purchases.best.database.model.interactors.database_interactor.RequestListWithPurchases
 import org.purchases.best.model.screens.list.ListScreenContract
 import org.purchases.best.ui.base.reducer.BaseReducerAbstract
 

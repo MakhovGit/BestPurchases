@@ -1,8 +1,8 @@
 package org.purchases.best.ui.screens.home_screen
 
-import org.purchases.best.model.interactors.database_interactor.DatabaseInteractorMessages
-import org.purchases.best.model.interactors.database_interactor.DeleteList
-import org.purchases.best.model.interactors.database_interactor.RequestLists
+import org.purchases.best.database.model.interactors.database_interactor.DatabaseInteractorMessages
+import org.purchases.best.database.model.interactors.database_interactor.DeleteList
+import org.purchases.best.database.model.interactors.database_interactor.RequestLists
 import org.purchases.best.model.screens.home.HomeScreenContract
 import org.purchases.best.ui.base.reducer.BaseReducerAbstract
 

@@ -21,4 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "BestPurchases"
 include(":app")
- 
+include(":core")
+include(":database")

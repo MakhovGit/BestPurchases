@@ -38,16 +38,16 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import org.purchases.best.R
-import org.purchases.best.model.info.ListWithPurchasesInfo
-import org.purchases.best.model.info.PurchaseInfo
 import org.purchases.best.model.screens.create_list.CreateListScreenContract
 import org.purchases.best.ui.screens._elements.PurchaseRecordOnCreate
 import org.purchases.best.ui.screens._elements.SimpleButton
 import org.purchases.best.ui.theme.LocalTitleColor
 import org.purchases.best.ui.theme.ScreenBackgroundColor
 import org.purchases.best.ui.theme.TextFieldBackgroundColor
-import org.purchases.best.utils.EMPTY
 import org.purchases.best.utils.floatResource
+import org.purchases.core.model.info.ListWithPurchasesInfo
+import org.purchases.core.model.info.PurchaseInfo
+import org.purchases.core.utils.EMPTY
 
 @SuppressLint("RestrictedApi")
 @Composable

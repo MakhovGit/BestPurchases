@@ -1,56 +1,59 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
-    alias(libs.plugins.google.devtools.ksp)
 }
 
 android {
-    namespace = "org.purchases.best"
-    compileSdk = 34
+    namespace = AppConfig.nameSpace
+    compileSdk = AppConfig.compileSdk
 
     defaultConfig {
-        applicationId = "org.purchases.best"
-        minSdk = 24
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        applicationId = AppConfig.applicationId
+        minSdk = AppConfig.minSdk
+        targetSdk = AppConfig.targetSdk
+        versionCode = AppConfig.versionCode
+        versionName = AppConfig.versionName
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = AppConfig.testInstrumentationRunner
         vectorDrawables {
-            useSupportLibrary = true
+            useSupportLibrary = AppConfig.useSupportLibrary
         }
     }
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = AppConfig.isMinifyEnabled
             proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
+                getDefaultProguardFile(AppConfig.proguardFileTxt),
+                AppConfig.proguardFilePro
             )
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = AppConfig.sourceCompatibility
+        targetCompatibility = AppConfig.targetCompatibility
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = AppConfig.jvmTarget
     }
     buildFeatures {
-        compose = true
+        compose = AppConfig.compose
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.14"
+        kotlinCompilerExtensionVersion = AppConfig.kotlinCompilerExtensionVersion
     }
     packaging {
         resources {
-            excludes += "/META-INF/{AL2.0,LGPL2.1}"
+            excludes += AppConfig.excludes
         }
     }
 }
 
 dependencies {
+
+    // Modules
+    implementation(project(Modules.CORE))
+    implementation(project(Modules.DATABASE))
 
     // Android
     implementation(libs.androidx.core.ktx)
@@ -70,11 +73,6 @@ dependencies {
     implementation(libs.koin.core)
     implementation(libs.koin.android)
     implementation(libs.koin.compose)
-
-    // Room
-    implementation(libs.room.runtime)
-    implementation(libs.room.ktx)
-    ksp(libs.room.ksp)
 
     // Tests
     testImplementation(libs.junit)

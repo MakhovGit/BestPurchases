@@ -3,8 +3,8 @@ package org.purchases.best.ui.screens.list_screen
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
-import org.purchases.best.data.interactors.DatabaseInteractor
-import org.purchases.best.model.interactors.database_interactor.RequestListWithPurchases
+import org.purchases.best.database.data.interactors.DatabaseInteractor
+import org.purchases.best.database.model.interactors.database_interactor.RequestListWithPurchases
 import org.purchases.best.model.screens.list.ListScreenContract
 import org.purchases.best.ui.base.BaseViewModelAbstract
 

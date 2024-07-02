@@ -29,13 +29,13 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import org.purchases.best.R
 import org.purchases.best.model.screens.list.ListScreenContract
-import org.purchases.best.settings.LIST_ID
 import org.purchases.best.ui.navigation.NavigationItem
 import org.purchases.best.ui.screens._elements.IconButton
 import org.purchases.best.ui.screens._elements.PurchaseRecord
 import org.purchases.best.ui.screens._elements.TopBar
 import org.purchases.best.ui.theme.ScreenBackgroundColor
 import org.purchases.best.utils.floatResource
+import org.purchases.core.settings.LIST_ID
 
 @SuppressLint("RestrictedApi")
 @Composable

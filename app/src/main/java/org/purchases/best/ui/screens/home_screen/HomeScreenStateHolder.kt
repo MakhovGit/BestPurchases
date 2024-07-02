@@ -3,7 +3,7 @@ package org.purchases.best.ui.screens.home_screen
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
-import org.purchases.best.model.interactors.database_interactor.DatabaseInteractorMessages
+import org.purchases.best.database.model.interactors.database_interactor.DatabaseInteractorMessages
 import org.purchases.best.model.screens.home.HomeScreenContract
 import org.purchases.best.ui.base.state_holder.StateHolder
 

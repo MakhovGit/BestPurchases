@@ -1,8 +1,8 @@
 package org.purchases.best.model.screens.add_item
 
-import org.purchases.best.model.info.PurchaseInfo
 import org.purchases.best.model.screens.ViewEvent
 import org.purchases.best.model.screens.ViewState
+import org.purchases.core.model.info.PurchaseInfo
 
 class AddItemScreenContract {
     data object State : ViewState

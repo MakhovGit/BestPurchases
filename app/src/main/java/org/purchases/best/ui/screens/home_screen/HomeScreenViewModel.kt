@@ -3,9 +3,9 @@ package org.purchases.best.ui.screens.home_screen
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
-import org.purchases.best.data.interactors.DatabaseInteractor
-import org.purchases.best.model.interactors.database_interactor.DeleteList
-import org.purchases.best.model.interactors.database_interactor.RequestLists
+import org.purchases.best.database.data.interactors.DatabaseInteractor
+import org.purchases.best.database.model.interactors.database_interactor.DeleteList
+import org.purchases.best.database.model.interactors.database_interactor.RequestLists
 import org.purchases.best.model.screens.home.HomeScreenContract
 import org.purchases.best.ui.base.BaseViewModelAbstract
 

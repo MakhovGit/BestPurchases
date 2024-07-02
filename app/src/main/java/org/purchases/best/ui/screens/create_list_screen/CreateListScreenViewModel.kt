@@ -2,7 +2,7 @@ package org.purchases.best.ui.screens.create_list_screen
 
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
-import org.purchases.best.data.interactors.DatabaseInteractor
+import org.purchases.best.database.data.interactors.DatabaseInteractor
 import org.purchases.best.model.screens.create_list.CreateListScreenContract
 import org.purchases.best.ui.base.BaseViewModelAbstract
 

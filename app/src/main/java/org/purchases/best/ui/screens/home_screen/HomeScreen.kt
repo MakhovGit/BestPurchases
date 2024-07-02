@@ -29,9 +29,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import org.purchases.best.R
-import org.purchases.best.model.info.ListInfo
 import org.purchases.best.model.screens.home.HomeScreenContract
-import org.purchases.best.settings.LIST_ID
 import org.purchases.best.ui.navigation.NavigationItem
 import org.purchases.best.ui.screens._elements.HomeScreenCard
 import org.purchases.best.ui.screens._elements.IconButton
@@ -39,6 +37,8 @@ import org.purchases.best.ui.screens._elements.MainProgressIndicator
 import org.purchases.best.ui.theme.LocalTitleColor
 import org.purchases.best.ui.theme.ScreenBackgroundColor
 import org.purchases.best.utils.floatResource
+import org.purchases.core.model.info.ListInfo
+import org.purchases.core.settings.LIST_ID
 
 @SuppressLint("RestrictedApi")
 @Composable

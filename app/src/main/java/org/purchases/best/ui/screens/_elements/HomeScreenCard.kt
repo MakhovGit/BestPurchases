@@ -31,8 +31,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.sp
 import org.purchases.best.R
-import org.purchases.best.model.info.ListInfo
 import org.purchases.best.utils.floatResource
+import org.purchases.core.model.info.ListInfo
 
 @SuppressLint("RestrictedApi")
 @Composable

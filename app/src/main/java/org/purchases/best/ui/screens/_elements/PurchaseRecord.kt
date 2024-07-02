@@ -19,11 +19,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.text.style.TextDecoration
 import org.purchases.best.R
-import org.purchases.best.model.info.PurchaseInfo
 import org.purchases.best.model.screens.list.ListScreenContract
 import org.purchases.best.ui.screens.list_screen.ListScreenViewModel
 import org.purchases.best.ui.theme.ScreenBackgroundColor
 import org.purchases.best.utils.floatResource
+import org.purchases.core.model.info.PurchaseInfo
 
 @Composable
 fun PurchaseRecord(purchaseInfo: PurchaseInfo, viewModel: ListScreenViewModel) {

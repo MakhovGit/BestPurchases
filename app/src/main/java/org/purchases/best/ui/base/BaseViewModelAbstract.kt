@@ -8,7 +8,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import org.purchases.best.model.screens.ViewEvent
 import org.purchases.best.model.screens.ViewState
-import org.purchases.best.settings.MAIN_LOG_TAG
+import org.purchases.core.settings.MAIN_LOG_TAG
 
 abstract class BaseViewModelAbstract<E : ViewEvent, S : ViewState>(
 ) : ViewModel() {
