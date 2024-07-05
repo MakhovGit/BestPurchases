@@ -4,40 +4,4 @@
     <string name="app_name">BestPurchases</string>
     <!-- Commons end -->
 
-    <!-- Elements begin -->
-    <string name="elements_top_bar_icon_content_description">Стрелка "назад"</string>
-    <string name="elements_home_screen_card_icon_content_description">Иконка "Меню"</string>
-    <string name="elements_home_screen_menu_item_delete">Удалить</string>
-    <!-- Elements begin -->
-
-    <!-- AddItemScreen begin -->
-    <string name="add_item_screen_title">Добавить в список</string>
-    <string name="add_item_screen_placeholder">Название</string>
-    <string name="add_item_screen_cancel_button">Отмена</string>
-    <string name="add_item_screen_add_button">Добавить</string>
-    <string name="add_item_screen_icon_content_description">Иконка</string>
-    <!-- AddItemScreen end -->
-
-    <!-- CreateListScreen begin -->
-    <string name="create_list_screen_title">Создать новый список</string>
-    <string name="create_list_screen_icon_content_description">Иконка</string>
-    <string name="create_list_screen_list_name_placeholder">Название списка</string>
-    <string name="create_list_screen_purchase_name_placeholder">Наименование</string>
-    <string name="create_list_screen_cancel_button">Отмена</string>
-    <string name="create_list_screen_list_name_default">Новый список</string>
-    <string name="create_list_screen_create_button">Создать</string>
-    <!-- CreateListScreen end -->
-
-    <!-- HomeScreen begin -->
-    <string name="home_screen_title">Список покупок</string>
-    <string name="home_screen_no_lists">Пока нет списков</string>
-    <string name="home_screen_new_list_button">Новый список</string>
-    <!-- HomeScreen end -->
-
-    <!-- ListScreen begin -->
-    <string name="list_screen_no_purchases">Пока нет пунктов</string>
-    <string name="list_screen_icon_content_description">Иконка</string>
-    <string name="list_screen_add_button">Добавить</string>
-    <!-- ListScreen end -->
-
 </resources>

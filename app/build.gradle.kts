@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.compose.compiler)
 }
 
 android {
@@ -52,8 +53,14 @@ android {
 dependencies {
 
     // Modules
-    implementation(project(Modules.CORE))
     implementation(project(Modules.DATABASE))
+    implementation(project(Modules.CORE_UI))
+    implementation(project(Modules.CORE))
+    implementation(project(Modules.HOME_SCREEN))
+    implementation(project(Modules.CREATE_LIST_SCREEN))
+    implementation(project(Modules.ADD_ITEM_SCREEN))
+    implementation(project(Modules.LIST_SCREEN))
+    implementation(project(Modules.NAVIGATION))
 
     // Android
     implementation(libs.androidx.core.ktx)
@@ -69,10 +76,7 @@ dependencies {
     implementation(libs.androidx.navigation)
 
     // Koin
-    implementation(platform(libs.koin.bom))
-    implementation(libs.koin.core)
-    implementation(libs.koin.android)
-    implementation(libs.koin.compose)
+    implementation(libs.bundles.koin.bundle.full)
 
     // Tests
     testImplementation(libs.junit)

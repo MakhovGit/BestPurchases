@@ -32,3 +32,27 @@ object CoreConfig : BaseConfig() {
 object DatabaseConfig : BaseConfig() {
     const val nameSpace = "org.purchases.database"
 }
+
+object CoreUiConfig : BaseConfig() {
+    const val nameSpace = "org.purchases.core_ui"
+}
+
+object NavigationConfig : BaseConfig() {
+    const val nameSpace = "org.purchases.navigation"
+}
+
+object HomeScreenConfig : BaseConfig() {
+    const val nameSpace = "org.purchases.home_screen"
+}
+
+object AddItemScreenConfig : BaseConfig() {
+    const val nameSpace = "org.purchases.add_item_screen"
+}
+
+object CreateListScreenConfig : BaseConfig() {
+    const val nameSpace = "org.purchases.create_list_screen"
+}
+
+object ListScreenConfig : BaseConfig() {
+    const val nameSpace = "org.purchases.list_screen"
+}

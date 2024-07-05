@@ -44,8 +44,7 @@ dependencies {
 
     // Koin
     implementation(platform(libs.koin.bom))
-    implementation(libs.koin.core)
-    implementation(libs.koin.android)
+    implementation(libs.bundles.koin.bundle)
 
     // Room
     implementation(libs.room.runtime)

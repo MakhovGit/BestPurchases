@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="title">Создать новый список</string>
+    <string name="icon_content_description" tools:ignore="PrivateResource">Иконка</string>
+    <string name="list_name_placeholder">Название списка</string>
+    <string name="purchase_name_placeholder">Наименование</string>
+    <string name="cancel_button">Отмена</string>
+    <string name="list_name_default">Новый список</string>
+    <string name="create_button">Создать</string>
+</resources>

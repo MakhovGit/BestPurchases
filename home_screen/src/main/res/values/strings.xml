@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title">Список покупок</string>
+    <string name="no_lists">Пока нет списков</string>
+    <string name="new_list_button">Новый список</string>
+    <string name="card_icon_content_description">Иконка "Меню"</string>
+    <string name="menu_item_delete">Удалить</string>
+</resources>

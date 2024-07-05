@@ -3,8 +3,9 @@ package org.purchases.best
 import android.app.Application
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
+import org.koin.core.annotation.KoinExperimentalAPI
 import org.koin.core.context.startKoin
-import org.purchases.best.database.di.databaseKoinModule
+import org.koin.core.lazyModules
 import org.purchases.best.di.appKoinModule
 
 class App : Application() {
@@ -18,7 +19,7 @@ class App : Application() {
         startKoin {
             androidLogger()
             androidContext(this@App)
-            modules(appKoinModule, databaseKoinModule)
+            modules(appKoinModule)
         }
     }
 

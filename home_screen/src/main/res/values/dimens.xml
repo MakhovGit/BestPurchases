@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- HomeScreenCard begin -->
+    <dimen name="home_screen_card_vertical_padding">20dp</dimen>
+    <dimen name="home_screen_card_start_padding">20dp</dimen>
+    <dimen name="home_screen_card_font_size">25sp</dimen>
+    <integer name="home_screen_card_text_max_lines">1</integer>
+    <dimen name="home_screen_card_icon_size">45dp</dimen>
+    <!-- HomeScreenCard end -->
+</resources>
