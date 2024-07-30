@@ -4,6 +4,7 @@ This application helps manage shopping lists. It allows you to create new lists,
 ### Technologies used:
 - Kotlin
 - MVI
+- Kotlin Flow
 - App modularization
 - Jetpack Compose
 - Jetpack Navigation
