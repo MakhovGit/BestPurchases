@@ -18,6 +18,8 @@ import org.purchases.best.database.model.interactors.database_interactor.Request
 import org.purchases.best.database.model.interactors.database_interactor.SaveList
 import org.purchases.best.database.model.interactors.database_interactor.SavePurchase
 import org.purchases.best.database.model.interactors.database_interactor.TogglePurchase
+import org.purchases.core.model.info.ListWithPurchasesInfo
+import org.purchases.core.model.info.PurchaseInfo
 import org.purchases.core.settings.MAIN_LOG_TAG
 import org.purchases.core.utils.EMPTY
 import org.purchases.core.utils.ONE
@@ -71,7 +73,7 @@ class DatabaseInteractor(
         }
     }
 
-    fun saveList(listWithPurchases: org.purchases.core.model.info.ListWithPurchasesInfo) {
+    fun saveList(listWithPurchases: ListWithPurchasesInfo) {
         saveListJob?.cancel()
         saveListJob = mainScope.launch {
             _outFlow.emit(SaveList.Processing)
@@ -122,7 +124,7 @@ class DatabaseInteractor(
         }
     }
 
-    fun savePurchase(listId: Long, purchase: org.purchases.core.model.info.PurchaseInfo) {
+    fun savePurchase(listId: Long, purchase: PurchaseInfo) {
         savePurchaseJob?.cancel()
         savePurchaseJob = mainScope.launch {
             _outFlow.emit(SavePurchase.Processing)

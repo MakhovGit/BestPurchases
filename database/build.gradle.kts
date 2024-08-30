@@ -28,6 +28,11 @@ android {
         sourceCompatibility = DatabaseConfig.sourceCompatibility
         targetCompatibility = DatabaseConfig.targetCompatibility
     }
+    testOptions {
+        unitTests {
+            isIncludeAndroidResources = true
+        }
+    }
     kotlinOptions {
         jvmTarget = DatabaseConfig.jvmTarget
     }
@@ -41,6 +46,7 @@ dependencies {
     // Android
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.junit.ktx)
 
     // Koin
     implementation(platform(libs.koin.bom))
@@ -52,7 +58,14 @@ dependencies {
     ksp(libs.room.ksp)
 
     // Tests
+    testImplementation(libs.androidx.runner)
     testImplementation(libs.junit)
+    testImplementation(libs.core.ktx)
+    testImplementation(libs.kotlinx.coroutines.test)
+    //testImplementation(libs.mockito.kotlin)
+    testImplementation(libs.mockk)
+    testImplementation(libs.robolectric)
+    testImplementation(libs.room.testing)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 }
